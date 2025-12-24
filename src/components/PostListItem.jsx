@@ -1,4 +1,5 @@
 import { AvatarFallback } from "@/components/ui/avatar";
+import { getAssetUrl } from "@/lib/assets";
 import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faRepeat, faShare } from "@fortawesome/free-solid-svg-icons";
 
@@ -24,7 +25,7 @@ export default function PostListItem({ post }) {
           {" "}
           <Avatar className="w-9 h-9 ">
             <AvatarImage
-              src="../../public/img/avt.jpg"
+              src={getAssetUrl("img/avt.jpg")}
               className="size-9 rounded-full"
             />
             <AvatarFallback className="size-8">Avt</AvatarFallback>

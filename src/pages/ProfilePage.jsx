@@ -3,6 +3,7 @@ import PostListItem from "@/components/PostListItem";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
+import { getAssetUrl } from "@/lib/assets";
 import {
   faBell,
   faCircleLeft,
@@ -58,7 +59,9 @@ const Profile = () => {
           </div>
           <div>
             <Avatar className="h-21 w-21">
-              <AvatarImage src="../../public/img/avatarProfile.jpg"></AvatarImage>
+              <AvatarImage
+                src={getAssetUrl("img/avatarProfile.jpg")}
+              ></AvatarImage>
               <AvatarFallback>Avatar</AvatarFallback>
             </Avatar>
           </div>

@@ -1,4 +1,5 @@
 import PostListItem from "@/components/PostListItem";
+import { getAssetUrl } from "@/lib/assets";
 import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
@@ -21,14 +22,8 @@ const PostDetail = () => {
   return (
     <div>
       <div
-        className="  pl-4 pt-2 flex items-center  cursor-pointer"
-        onClick={() => {
-          if (window.history.length > 1) {
-            navigate(-1);
-          } else {
-            navigate("/");
-          }
-        }}
+        className="pl-4 pt-2 flex items-center  cursor-pointer"
+        onClick={() => navigate(-1)}
       >
         <FontAwesomeIcon icon={faCircleLeft} className="pb-2 pr-2" />
         <p className="pb-2 pr-2">Quay Lại</p>
@@ -42,7 +37,7 @@ const PostDetail = () => {
             {" "}
             <Avatar className="w-9 h-9 ">
               <AvatarImage
-                src="../../public/img/avt.jpg"
+                src={getAssetUrl("img/avt.jpg")}
                 className="size-9 rounded-full"
               />
               <AvatarFallback className="size-8">Avt</AvatarFallback>

@@ -9,7 +9,7 @@ import PostDetail from "./pages/PostDetailPage";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={"/threads-clone-react/"}>
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<Home />} />

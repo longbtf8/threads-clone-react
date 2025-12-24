@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { NavLink } from "react-router";
 import PostItem from "./PostItem";
+import { getAssetUrl } from "@/lib/assets";
 
 const items = [
   { path: "/", icon: faHouse },
@@ -28,7 +29,7 @@ const Navigation = () => {
         className="hidden md:flex md:items-center md:justify-center md:h-12 md:w-[80%] cursor-pointer
          "
       >
-        <img src="../../public/img/Threads_(app)_logo.svg.png" alt="logo" />
+        <img src={getAssetUrl("img/Threads_(app)_logo.svg.png")} alt="logo" />
       </div>
       <ul className="flex items-center justify-around h-full md:flex-col w-full md:flex-1 md:h-auto md:justify-center md:gap-2">
         {items.map((item, index) =>

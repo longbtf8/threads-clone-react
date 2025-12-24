@@ -1,6 +1,7 @@
 import { Heading } from "@/components/Header";
 import PostItem from "@/components/PostItem";
 import PostListItem from "@/components/PostListItem";
+import { getAssetUrl } from "@/lib/assets";
 
 import { useEffect, useState } from "react";
 
@@ -25,7 +26,7 @@ const Home = () => {
       <section className="h-17 hidden md:flex border-b p-4 ">
         <div className="flex-1 flex justify-start items-center gap-1">
           <img
-            src="../../public/img/placeholder.avif"
+            src={getAssetUrl("img/placeholder.avif")}
             alt="Profile"
             className="h-9 border rounded-full"
           />

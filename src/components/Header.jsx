@@ -1,12 +1,13 @@
+import { getAssetUrl } from "@/lib/assets";
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   return (
-    <div className="bg-white fixed h-16 top-0 left-16 right-0 flex justify-center items-center">
+    <div className="bg-white fixed h-16 top-0 left-0 right-0 flex justify-center items-center">
       <div className=" flex-1 flex justify-center items-center h-8 w-8 md:hidden">
         <img
-          src="../../public/img/Threads_(app)_logo.svg.png"
+          src={getAssetUrl("img/Threads_(app)_logo.svg.png")}
           alt="Logo"
           className="h-full"
         />
